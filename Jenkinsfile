@@ -32,7 +32,7 @@ pipeline {
         }
 
 
-        stage('Trivy Scan'){
+        stage('Trivy Scanning'){
             steps{
                 bat "C:\\trivy_0.71.0_windows-64bit\\trivy.exe fs . > trivy_report.txt"
             }
