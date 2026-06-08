@@ -34,7 +34,9 @@ pipeline {
 
         stage('Trivy Scan'){
             steps{
-                bat 'trivy fs . > trivy_report.txt'
+                bat """
+                docker run --rm -v %cd%:/project aquasec/trivy fs /project > trivy_report.txt
+                    """
             }
         }
 
