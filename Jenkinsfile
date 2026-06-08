@@ -5,7 +5,8 @@ pipeline {
     stages{
         stage('Checkout Repo'){
             steps{
-                git 'https://github.com/omk130/jenekins-python-security.git'
+                git branch: 'main',
+                url: 'https://github.com/omk130/jenekins-python-security.git'
             }
         }
 
