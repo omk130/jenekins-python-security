@@ -20,21 +20,21 @@ pipeline {
 
         stage('Static Code Analysis'){
             steps{
-                bat 'pylint app.py'
+                bat 'python -m pylint app.py'
             }
         }
 
 
         stage('Dependency Check'){
             steps{
-                bat 'safety scan'
+                bat 'python -m safety scan'
             }
         }
 
 
         stage('Trivy Scan'){
             steps{
-                bat 'trivy fs . > trivy_report.txt'
+                bat 'python -m trivy fs . > trivy_report.txt'
             }
         }
 
