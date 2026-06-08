@@ -39,9 +39,4 @@ pipeline {
         }
 
     }
-        post{
-            always{
-                archiveArtifacts artifacts: 'trivy-report.txt'
-            }
-        }
 }
