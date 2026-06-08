@@ -27,7 +27,7 @@ pipeline {
 
         stage('Dependency Check'){
             steps{
-                bat 'python -m safety scan --ci --json'
+                bat 'python -m safety check'
             }
         }
 
