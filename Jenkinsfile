@@ -34,7 +34,7 @@ pipeline {
 
         stage('Trivy Scan'){
             steps{
-                bat 'python -m trivy fs . > trivy_report.txt'
+                bat 'trivy fs . > trivy_report.txt'
             }
         }
 
