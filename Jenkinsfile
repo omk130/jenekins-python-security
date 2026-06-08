@@ -3,7 +3,7 @@ pipeline {
     agent any 
 
     stages{
-        stage('Checkout'){
+        stage('Checkout Repo'){
             steps{
                 git 'https://github.com/omk130/jenekins-python-security.git'
             }
