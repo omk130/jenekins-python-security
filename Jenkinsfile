@@ -20,7 +20,7 @@ pipeline {
 
         stage('Static Code Analysis'){
             steps{
-                bat 'pytlint app.py'
+                bat 'pylint app.py'
             }
         }
 
